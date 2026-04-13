@@ -68,9 +68,9 @@ task.spawn(function()
     end
 end)
 
---// Fast Attack 1
+--// Fast Attack Main
 
-loadstring(game:HttpGet("https://pastefy.app/0zBywR8c/raw"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/AnhDzaiScript/Setting/refs/heads/main/FastMax.lua"))()
 local function GetBladeHits()
     local targets = {}
     local function GetDistance(v)
@@ -135,7 +135,7 @@ local ShootGunEvent = Net:WaitForChild("RE/ShootGunEvent")
 local GunValidator = ReplicatedStorage:WaitForChild("Remotes"):WaitForChild("Validator2")
 
 local Config = {
-    AttackDistance = 65,
+    AttackDistance = 70,
     AttackMobs = true,
     AttackPlayers = true,
     AttackCooldown = 0.2,
@@ -362,7 +362,7 @@ for _, v in pairs(getgc(true)) do
         end
     end
 end
----Fast Sp
+---Fast 2 ---
 local Modules = game.ReplicatedStorage.Modules
 local Net = Modules.Net
 local Register_Hit, Register_Attack = Net:WaitForChild("RE/RegisterHit"), Net:WaitForChild("RE/RegisterAttack")
@@ -413,17 +413,3 @@ function Funcs:Attack()
     end
     Register_Hit:FireServer(unpack(args))
 end
-
---// Fast Attack 2
-
-_G.AttackM = true
-_G.AttackP = true
-_G.Animation = false
-
-local Load = loadstring(game:HttpGet("https://raw.githubusercontent.com/Dex-Bear/VxezeHubLoader/refs/heads/main/FastAttack.lua"))()
-
-task.spawn(function()
-    while task.wait(0.03) do
-        Load:Attack()
-    end
-end)
