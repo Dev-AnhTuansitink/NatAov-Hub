@@ -655,7 +655,7 @@ local MinimizedTitle = nil
 
 function natlib:MakeWindow(Configs)
     local WTitle = Configs[1] or Configs.Name or Configs.Title or "NatAov Library vip"
-    local WMiniText = Configs[2] or Configs.SubTitle or "by : Quang Huy"
+    local WMiniText = Configs[2] or Configs.SubTitle or "by : Atuansitnk"
     
     Settings.ScriptFile = Configs[3] or Configs.SaveFolder or false
     
@@ -2691,7 +2691,7 @@ function natlib:MakeWindow(Configs)
             
             local JoinButton = InsertTheme(Create("TextButton", ButtonContainer, {
                 Size = UDim2.new(1, 0, 1, 0),
-                Text = "Follow Tik Tok",
+                Text = "Copy Link",
                 Font = Enum.Font.GothamBold,
                 TextSize = 13,
                 BackgroundColor3 = Color3.fromRGB(88, 101, 242),
@@ -3052,19 +3052,7 @@ function natlib:MakeWindow(Configs)
         ToggleButton.MouseButton1Click:Connect(function()
             Window:Minimize()
         end)
-        
-        local Flag = Instance.new("ImageLabel")
-        Flag.Name = "VNFlagIcon"
-        Flag.Parent = ToggleButton
-        Flag.BackgroundTransparency = 1
-        Flag.Image = "rbxassetid://90723031696932"
-        Flag.Size = UDim2.fromOffset(28, 18)
-        Flag.AnchorPoint = Vector2.new(0.5, 0.5)
-        Flag.Position = UDim2.new(1, -2, 0, 2)
-        Flag.ZIndex = 100
-        Flag.Rotation = 15
     end)
-    
     return Window
 end
 
