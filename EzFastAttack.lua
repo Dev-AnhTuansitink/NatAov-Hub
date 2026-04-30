@@ -1,15 +1,6 @@
 -- // [[ Nat Aov Hub Fast Attack Blox Fruits VIP ]] \\
 -- || This File Created By Nguyễn Anh Tuấn ||
 
---// No Cool Down m1 
-
-local old
-old = hookfunction(task.delay,function(t,f,...)
-    if t > 0.1 then
-        return old(0,f,...)
-    end
-    return old(t,f,...)
-end)
 
 --// Unban Fast Attack 
 
@@ -70,4 +61,14 @@ end)
 
 --// Fast Attack Main
 
-loadstring(game:HttpGet("https://pandadevelopment.net/virtual/file/e9c206fd76482ee2"))()
+_G.AttackM = true
+_G.AttackP = true
+_G.Animation = false
+
+local Load = loadstring(game:HttpGet("https://pastefy.app/zGvNP4d1/raw"))()
+
+task.spawn(function()
+    while task.wait(0.03) do
+        Load:Attack()
+    end
+end)
